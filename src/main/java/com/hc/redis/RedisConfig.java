@@ -47,7 +47,9 @@ public class RedisConfig {
             String[] node = split.split(":");
             redisNodes.add(new RedisNode(node[0], Integer.parseInt(node[1])));
         }
+        redisClusterConfiguration.setMaxRedirects(3);
         redisClusterConfiguration.setClusterNodes(redisNodes);
+        redisClusterConfiguration.setPassword(redisProperties.getPassword());
         return redisClusterConfiguration;
     }
 

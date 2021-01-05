@@ -26,10 +26,10 @@ public class RedisTest {
 
     @Test
     public void test1() throws InterruptedException {
-        RLock lock = redissonClient.getLock("lock1");
+        RLock lock = redissonClient.getLock("lock_key");
         lock.lock();
-        System.out.println("dddd");
-        Thread.sleep(100000);
+        Thread.sleep(1000);
         lock.unlock();
+
     }
 }
