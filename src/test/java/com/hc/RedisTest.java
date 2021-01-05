@@ -31,5 +31,6 @@ public class RedisTest {
         Thread.sleep(1000);
         lock.unlock();
 
+
     }
 }
